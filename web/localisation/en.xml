@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<language>
+	<languageName>English</languageName>
+	<title>Title</title>
+	<article>
+		<name>Article</name>
+		<edit>Edit</name>
+		<new>New</new>
+		<save>Save</save>
+	</article>
+	<menu>
+		<search>Search</search>
+		<randomPage>Random page</randomPage>
+		<contactUs>
+			<name>Contact us</name>
+			<yourName>Your name</yourName>
+			<yourMessage>Your message</yourMessage>
+			<yourEmail>Your email</yourEmail>
+			<send>Send</name>
+		</contactUs>
+	</menu>
+</language>
