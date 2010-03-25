@@ -1,5 +1,5 @@
 ﻿<?php
-	require_once('classes/AssemblyInfo.ns.php');
+	require_once('model/AssemblyInfo.ns.php');
 	
 	$indexAction = new IndexAction();
 	$indexAction->execute();
