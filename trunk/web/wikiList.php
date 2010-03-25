@@ -1,5 +1,13 @@
 ﻿<?php
-	require_once('classes/AssemblyInfo.ns.php');
+	require_once('model/AssemblyInfo.ns.php');
+	
+	$wikiListAction = new WikiListAction();
+	$wikiListAction->execute();
+	
+	$wikiList = $wikiListAction->getWikiList();
+	
+	if ($wiki == null) //Si aucune wiki, on affiche la liste des wiki
+		header('Location: wikiList.php');
 ?>		
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//<?php echo $wiki->getLanguageName()?>" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $wiki->getLanguageName()?>" lang="<?php echo $wiki->getLanguageName()?>">
@@ -12,7 +20,7 @@
 	</head>
 	<body>
 		<?php
-			echo WikiListViewer::getHtmlCode(WikiManager::getWikiList());
+			echo WikiListViewer::getHtmlCode($wikiList);
 		?>
 	</body>
 </html>
