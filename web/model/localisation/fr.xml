@@ -1,22 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<language>
-	<languageName>Français</languageName>
-	<title>Titre</title>
-	<article>
-		<name>Article</name>
-		<edit>Modifier</name>
-		<new>Créer</new>
-		<save>Sauvegarder</save>
-	</article>
-	<menu>
-		<search>Recherche</search>
-		<randomPage>Une page au hazard</randomPage>
-		<contactUs>
-			<name>Nous-joindre</name>
-			<yourName>Votre nom</yourName>
-			<yourMessage>Votre message</yourMessage>
-			<yourEmail>Votre adresse courriel</yourEmail>
-			<send>Envoyer</name>
-		</contactUs>
-	</menu>
-</language>
+<trunk>
+	<language>
+		<languageName>Français</languageName>
+		<title>Titre</title>
+		<article>
+			<name>Article</name>
+			<edit>Modifier</edit>
+			<new>Créer</new>
+			<save>Sauvegarder</save>
+		</article>
+		<menu>
+			<search>Recherche</search>
+			<randomPage>Une page au hazard</randomPage>
+			<contactUs>
+				<name>Nous-joindre</name>
+				<yourName>Votre nom</yourName>
+				<yourMessage>Votre message</yourMessage>
+				<yourEmail>Votre adresse courriel</yourEmail>
+				<send>Envoyer</send>
+			</contactUs>
+		</menu>
+	</language>
+</trunk>
