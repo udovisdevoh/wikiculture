@@ -1,10 +1,18 @@
 ﻿<?php
 	require_once('classes/AssemblyInfo.ns.php');
-	$wiki = WikiManager::getWikiFromTitle($_GET['wiki_title']); //Objet de type Wiki
-	$article = ArticleManager::getArticleFromTitle($wiki, $_GET['article_title']); //Objet de type article
+	
+	$indexAction = new IndexAction();
+	$indexAction->execute();
+	
+	$wiki = $indexAction->getWiki();
+	$article = $indexAction->getArticle();
 	
 	if ($wiki == null) //Si aucune wiki, on affiche la liste des wiki
 		header('Location: wikiList.php');
+	
+	$wiki = WikiManager::getWikiFromTitle($_GET['wiki_title']); //Objet de type Wiki
+	$article = ArticleManager::getArticleFromTitle($wiki, $_GET['article_title']); //Objet de type article
+	
 ?>		
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//<?php echo $wiki->getLanguageName()?>" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $wiki->getLanguageName()?>" lang="<?php echo $wiki->getLanguageName()?>">
