@@ -1,5 +1,7 @@
 <?php
 
+require_once("AssemblyInfo.php");
+
 class MemberManager
 {
 	//Retourne le user créé ou null si impossible à créer

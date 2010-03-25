@@ -1,14 +1,16 @@
 <?php
 
+require_once("AssemblyInfo.php");
+
 class Wiki
 {
 	private $id; //Unique ID
 	
-	private $title; //Titre de la wiki
+	private $title; //Titre de la wiki également sous forme de clef unique
 	
-	private $ownerList; //Liste des propriétaires de la wiki sous forme de liste de user
+	private $ownerList; //Liste des propriétaires de la wiki sous forme de liste de email
 		
-	private $languageXmlFileName; //Nom de fichier XML de langue
+	private $languageName; //Nom de fichier XML de langue (sans extension XML)
 }
 
 ?>
