@@ -10,6 +10,13 @@ class Wiki
 		
 	private $languageName; //Nom de fichier XML de langue (sans extension XML)
 	
+	public function __construct()
+	{
+		$this->title = "Wiki sans-titre";
+		$this->ownerList = array();
+		$this->languageName = "fr";
+	}
+	
 	public function getLanguageName()
 	{
 		return $this->languageName;
