@@ -1,6 +1,6 @@
 <?php
 
-require_once("AssemblyInfo.php");
+require_once("AssemblyInfo.ns.php");
 
 class ImageManager
 {
