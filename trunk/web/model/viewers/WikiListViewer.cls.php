@@ -7,16 +7,17 @@ class WikiListViewer
 	{
 		$html = "";
 		
+		
 		if (is_array($wikiList))
 		{
-			$html = "<ul>";
+			$html .= "<ul>";
 			foreach ($wikiList as $wiki)
-			{
+			{			
 				$html .= '<li>';
-				$html .= '<a href="./?wiki_title='.urlencode($wiki.getTitle()).'">'.$wiki.getTitle().'</a>';
+				$html .= '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'">'.$wiki->getTitle().'</a>';
 				$html .= '</li>';
 			}
-			$html = "</ul>";
+			$html .= "</ul>";
 		}
 		
 		return $html;

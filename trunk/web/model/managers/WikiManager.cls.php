@@ -11,6 +11,10 @@ class WikiManager
 		$searchCriteriaList['title'] = $wikiTitle;
 		
 		$row = $dao->getRow("wiki", $searchCriteriaList);
+		
+		if (!is_array($row))
+			return null;
+		
 		$dao->setFields($row, $wiki);
 		
 		return $wiki;
@@ -27,7 +31,9 @@ class WikiManager
 		{
 			foreach ($rowList as $row)
 			{
-				$wikiList[] = $dao->setFields($row, new Wiki());
+				$wiki = new Wiki();
+				$dao->setFields($row, $wiki);
+				$wikiList[] = $wiki;
 			}
 		}
 		
