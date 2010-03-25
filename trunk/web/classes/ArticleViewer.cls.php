@@ -4,7 +4,9 @@ require_once("AssemblyInfo.ns.php");
 
 class ArticleViewer
 {
-	public static getHtmlCode($article) //Retourne le code HTML d'un article
+	//$article: objet de type article
+	//Retourne le code HTML d'un article
+	public static getHtmlCode($article)
 	{
 		//TODO
 	}
