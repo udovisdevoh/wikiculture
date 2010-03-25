@@ -62,6 +62,20 @@ class Dao
 		return $rowList;
 	}
 	
+	public function setFields($row, $object)
+	{
+		foreach ($row as $key => $value)
+		{
+			$methodName = 'set'.ucfirst($key);
+			if (method_exists($object, $methodName))
+			{
+				$codeToEval = '$object->'.$methodName.'("'.$value.'");';
+				eval($codeToEval);
+			}
+		}
+		return $object;
+	}
+	
 	// $searchCritariaList and $orderByColumnName can be null
 	private function buildQuery($tableName, $searchCritariaList, $orderByColumnName)
 	{
