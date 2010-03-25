@@ -1,14 +1,14 @@
 <?php
 
+require_once("AssemblyInfo.php");
+
 class Member
 {
 	private $id; //Unique ID
 	
-	private $userName; //User name
+	private $emailAddress; //Email et user
 	
 	private $passwordMd5; //Password in MD5 format
-	
-	private $emailAddress;
 }
 
 ?>
