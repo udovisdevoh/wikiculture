@@ -1,0 +1,15 @@
+*
+{
+	margin: 0px;
+	font-family: Arial, Arial, Helvetica, sans-serif; 
+}
+
+a
+{
+	color:#00F;
+}
+
+a:hover
+{
+	color:#88F;
+}

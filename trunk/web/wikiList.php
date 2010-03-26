@@ -9,6 +9,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="language" content="en">
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<title>
 			WikiCulture : List of wikies
 		</title>
