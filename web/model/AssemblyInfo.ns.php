@@ -3,6 +3,7 @@
 //Actions
 require_once("AbstractAction.cls.php");
 require_once("IndexAction.cls.php");
+require_once("EditArticleAction.cls.php");
 require_once("WikiListAction.cls.php");
 
 //Object classes
@@ -21,6 +22,7 @@ require_once("managers/WikiManager.cls.php");
 
 //Viewers
 require_once("viewers/ArticleViewer.cls.php");
+require_once("viewers/ArticleEditorViewer.cls.php");
 require_once("viewers/MenuViewer.cls.php");
 require_once("viewers/WikiListViewer.cls.php");
 require_once("viewers/SearchFormViewer.cls.php");

@@ -1,18 +1,11 @@
-﻿<?php
+<?php
 	require_once('model/AssemblyInfo.ns.php');
 	
-	$indexAction = new IndexAction();
-	$indexAction->execute();
+	$editArticleAction = new EditArticleAction();
+	$editArticleAction->execute();
 	
-	$wiki = $indexAction->getWiki();
-	$article = $indexAction->getArticle();
-	
-	if ($wiki == null) //Si aucune wiki, on affiche la liste des wiki
-	{
-		//header('Location: wikiList.php');
-		require_once("wikiList.php");
-		die();
-	}
+	$wiki = $editArticleAction->getWiki();
+	$article = $editArticleAction->getArticle();
 ?>		
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//<?php echo $wiki->getLanguageName()?>" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $wiki->getLanguageName()?>" lang="<?php echo $wiki->getLanguageName()?>">
@@ -27,7 +20,7 @@
 	<body>
 		<?php
 			echo MenuViewer::getHtmlCode($wiki, $article);
-			echo ArticleViewer::getHtmlCode($wiki, $article);
+			echo ArticleEditorViewer::getHtmlCode($wiki, $article);
 		?>
 	</body>
 </html>

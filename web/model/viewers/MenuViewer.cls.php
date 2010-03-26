@@ -4,7 +4,7 @@ class MenuViewer
 {
 	//$wiki: Wiki
 	//retourne le code HTML du menu d'un wiki
-	public static function getHtmlCode($wiki)
+	public static function getHtmlCode($wiki,$article)
 	{
 		$language = LanguageManager::getLanguage($wiki->getLanguageName());
 	
@@ -12,6 +12,9 @@ class MenuViewer
 		
 		$html .= '<div class="LeftMenu">';
 			$html .= "<ul>";
+				$html .= "<li>";
+					$html .= '<a href="editArticle.php?wiki_title='.urlencode($wiki->getTitle()).'&article_title='.urlencode($article->getTitle()).'">'.$language->article->edit.'</a>';
+				$html .= "</li>";
 				$html .= "<li>";
 					$html .= '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->randomPage.'</a>';
 				$html .= "</li>";

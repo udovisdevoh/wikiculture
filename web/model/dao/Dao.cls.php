@@ -62,6 +62,7 @@ class Dao
 		return $rowList;
 	}
 	
+	//Met les valeurs des champs d'un objet selon les colonnes d'une table pour chaque champ ayant une method set()
 	public function setFields($row, $object)
 	{
 		foreach ($row as $key => $value)
@@ -74,6 +75,13 @@ class Dao
 			}
 		}
 		return $object;
+	}
+	
+	//Sauvegarde l'objet dans la base de données s'il a une methode getId() et si sa classe existe dans la base de donnée en tant que nom de table
+	public function save($object)
+	{
+		//TODO
+		die("Implement Dao.save()");
 	}
 	
 	// $searchCritariaList and $orderByColumnName can be null
