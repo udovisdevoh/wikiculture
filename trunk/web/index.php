@@ -26,9 +26,8 @@
 	</head>
 	<body>
 		<?php
-			echo '<h1>'.$wiki->getTitle().'</h1>';
 			echo MenuViewer::getHtmlCode($wiki);
-			echo ArticleViewer::getHtmlCode($article);
+			echo ArticleViewer::getHtmlCode($wiki, $article);
 		?>
 	</body>
 </html>
