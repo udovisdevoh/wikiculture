@@ -32,6 +32,11 @@ class Wiki
 		return $this->title;
 	}
 	
+	public function getId()
+	{
+		return $this->id;
+	}
+	
 	public function setTitle($title)
 	{
 		$this->title = $title;

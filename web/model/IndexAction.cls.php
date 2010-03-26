@@ -12,7 +12,13 @@ class IndexAction extends AbstractAction
 	protected function doAction()
 	{
 		$this->wiki = WikiManager::getWiki($_GET['wiki_title']);
-		$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
+		
+		if ($this->wiki != null)
+		{
+			$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
+			if ($this->article == null)
+				$this->article = ArticleManager::getRandomArticle($this->wiki);
+		}
 	}
 	
 	//Wiki qui sera chargée ou null si aucune wiki choisie

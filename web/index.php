@@ -9,6 +9,7 @@
 	
 	if ($wiki == null) //Si aucune wiki, on affiche la liste des wiki
 	{
+		//header('Location: wikiList.php');
 		require_once("wikiList.php");
 		die();
 	}
@@ -18,12 +19,14 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 		<meta name="language" content="<?php echo $wiki->getLanguageName()?>">
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<title>
 			<?php echo $wiki->getTitle()." : ".$article->getTitle(); ?>
 		</title>
 	</head>
 	<body>
 		<?php
+			echo '<h1>'.$wiki->getTitle().'</h1>';
 			echo MenuViewer::getHtmlCode($wiki);
 			echo ArticleViewer::getHtmlCode($article);
 		?>

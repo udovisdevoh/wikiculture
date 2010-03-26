@@ -20,6 +20,26 @@ class Article
 	{
 		return $this->title;
 	}
+	
+	public function setTitle($title)
+	{
+		$this->title = $title;
+	}
+	
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
+	
+	public function setContent($content)
+	{
+		$this->content = $content;
+	}
+	
+	public function setWikiId($wikiId)
+	{
+		$this->wikiId = $wikiId;
+	}
 }
 
 ?>
