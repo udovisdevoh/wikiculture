@@ -80,6 +80,26 @@ class Dao
 	//Sauvegarde l'objet dans la base de données s'il a une methode getId() et si sa classe existe dans la base de donnée en tant que nom de table
 	public function save($object)
 	{
+		$array = (array)$object;
+		$className = get_class($object);
+		
+		foreach ($array as $varName => $varValue)
+		{	
+			if (trim(substr($varName, 0, strlen($className)+1)) == $className)
+			{
+				$varName = substr($varName, strlen($className)+1);
+			}
+			
+			$varName = trim($varName);
+				
+			$methodName = 'get'.ucfirst($varName);
+			
+			if (method_exists($object, $methodName))
+			{
+				echo $methodName.'<br>';
+			}
+		}
+		
 		//TODO
 		die("Implement Dao.save()");
 	}
