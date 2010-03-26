@@ -13,3 +13,19 @@ a:hover
 {
 	color:#88F;
 }
+
+.LeftMenu
+{
+	border-style:dotted;
+	border-width:1px;
+	float:left;
+	min-height:600px;
+	padding:10px;
+}
+
+.Article
+{
+	float:left;
+	min-height:600px;
+	padding:10px;
+}
