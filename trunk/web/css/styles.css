@@ -29,3 +29,14 @@ a:hover
 	min-height:600px;
 	padding:10px;
 }
+
+.ArticleEditor
+{
+	float:left;
+	min-height:600px;
+	padding:10px;
+}
+
+.ArticleEditor textarea
+{
+}
