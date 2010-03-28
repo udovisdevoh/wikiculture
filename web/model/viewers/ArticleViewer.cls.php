@@ -60,11 +60,11 @@ class ArticleViewer
 			$subTags = explode("|",$line);
 			$wikiTitle = $subTags[0];
 			$articleTitle = $subTags[1];
-			return '<a href="./?wiki_title='.urlencode($wikiTitle).'&article_title='.urlencode($articleTitle).'">'.$articleTitle.'</a>';
+			return '<a href="./?wiki_title='.urlencode($wikiTitle).'&amp;article_title='.urlencode($articleTitle).'">'.$articleTitle.'</a>';
 		}
 		else
 		{
-			return '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'&article_title='.urlencode($line).'">'.$line.'</a>';
+			return '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'&amp;article_title='.urlencode($line).'">'.$line.'</a>';
 		}
 	}
 }

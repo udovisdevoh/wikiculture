@@ -14,7 +14,7 @@ class MenuViewer
 			$html .= '<img src="images/wikiCulture.png" alt="WikiCulture" style="margin-left:-10px" />';
 			$html .= "<ul>";
 				$html .= "<li>";
-					$html .= '<a href="editArticle.php?wiki_title='.urlencode($wiki->getTitle()).'&article_title='.urlencode($article->getTitle()).'">'.$language->article->edit.'</a>';
+					$html .= '<a href="editArticle.php?wiki_title='.urlencode($wiki->getTitle()).'&amp;article_title='.urlencode($article->getTitle()).'">'.$language->article->edit.'</a>';
 				$html .= "</li>";
 				$html .= "<li>";
 					$html .= '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->randomPage.'</a>';
