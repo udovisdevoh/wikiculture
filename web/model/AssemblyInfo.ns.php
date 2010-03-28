@@ -30,4 +30,6 @@ require_once("viewers/SearchFormViewer.cls.php");
 //Dao
 require_once("dao/Dao.cls.php");
 
+error_reporting(E_ALL ^ E_NOTICE);
+
 ?>
