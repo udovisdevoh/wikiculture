@@ -12,6 +12,7 @@ body
 	line-height:18px;
 	color:#AAB;
 	font-size:12px;
+	height:100%;
 }
 
 a
@@ -84,8 +85,8 @@ textarea
 
 div.LeftMenu
 {
-	border-style:dotted;
-	border-width:1px;
+	/*border-style:dotted;
+	border-width:1px;*/
 	float:left;
 	min-height:576px;
 	padding:10px;
@@ -93,12 +94,14 @@ div.LeftMenu
 	background-color:#630045;
 	background-image:url('../images/sideBackground.jpg');
 	background-repeat:no-repeat;
+	height:100%;
 }
 
 div.Article
 {
 	float:left;
 	min-height:567px;
+	height:100%;
 	padding:10px;
 	width:900px;
 	background-image:url('../images/contentBackground.jpg');
