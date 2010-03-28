@@ -8,7 +8,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $wiki->getLanguageName()?>" lang="<?php echo $wiki->getLanguageName()?>">
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta name="language" content="<?php echo $wiki->getLanguageName()?>">
+		<meta name="language" content="<?php echo $wiki->getLanguageName()?>" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<title>
 			<?php echo $wiki->getTitle()." : ".$article->getTitle(); ?>
