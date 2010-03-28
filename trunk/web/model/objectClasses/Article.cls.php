@@ -13,7 +13,7 @@ class Article
 	public function __construct()
 	{
 		$this->title = "Article sans-titre";
-		$this->content = "Ceci est un lien [article]<br />Ceci est un lien vers un autre wiki [wiki|article].";
+		$this->content = "Ceci est un lien ver un article: [article]. Ceci est un lien vers un article sur une autre wiki [wiki|article].";
 	}
 	
 	public function getId()
