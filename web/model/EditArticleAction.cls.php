@@ -14,10 +14,10 @@ class EditArticleAction extends AbstractAction
 		$this->wiki = WikiManager::getWiki($_GET['wiki_title']);
 		$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
 		
-		print_r($this->article);
 		
 		if ($this->article == null)
 		{
+			$dao = new Dao();			
 			$this->article = new Article();
 			$this->article->setTitle($_GET['article_title']);
 			$this->article->setContent("");
@@ -25,8 +25,14 @@ class EditArticleAction extends AbstractAction
 		
 		if ($_POST['article_content'] != null)
 		{
+			if ($this->article->getId() == null)
+				$this->article->setId($dao->getSequenceNextValue($this->article));
+		
 			$this->article->setContent(stripslashes($_POST['article_content']));
+			$this->article->setWikiId($this->wiki->getId());
 			$dao = new Dao();
+
+			
 			$dao->save($this->article);
 		}
 	}

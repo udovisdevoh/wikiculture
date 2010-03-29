@@ -83,11 +83,13 @@ class Dao
 	public function save($object)
 	{
 		$connection = $this->getConnection();
-		
+				
 		if ($this->isObjectExistAsRow($object))
 			$query = $this->buildUpdateQuery($object);	
 		else
 			$query = $this->buildInsertQuery($object);	
+		
+
 		
 		$statement = oci_parse($connection, $query);
 		
@@ -118,16 +120,40 @@ class Dao
 		$this->releaseConnection($connection);
 	}
 	
+	//Retourne le numero de séquence de l'id de l'objet
+	public function getSequenceNextValue($object)
+	{
+		$className = get_class($object);
+		
+		$connection = $this->getConnection();
+		
+		$query = "select ".$className."_id.nextval from dual";
+		
+		$statement = oci_parse($connection, $query);
+		
+		oci_execute($statement);
+					
+		$row = oci_fetch_array ($statement);
+		$this->releaseConnection($connection);
+		
+		return $row['NEXTVAL'];
+	}
+	
 	//Retourne true si l'objet 
 	private function isObjectExistAsRow($object)
-	{
+	{	
 		$tableName = get_class($object);
 		
 		$id = $object->getId();
 		
+		if ($id == null || $id == 0)
+			return false;
+		
 		$connection = $this->getConnection();
 		
-		$searchCriteriaLis['id']=$id;
+		$searchCritariaList['id']=$id;
+		
+		
 		
 		$query = $this->buildSelectQuery($tableName, $searchCritariaList,null);	
 		
@@ -143,11 +169,14 @@ class Dao
 		
 		oci_execute($statement);
 		
-		$this->releaseConnection($connection);
-					
 		$row = oci_fetch_array ($statement);
 		
-		return count($row) > 0;
+		
+		$this->releaseConnection($connection);
+					
+		
+
+		return (bool)$row;
 	}
 	
 	// $searchCritariaList and $orderByColumnName can be null
@@ -199,6 +228,43 @@ class Dao
 		
 		$query .= " WHERE id = :pid";
 		
+		return $query;
+	}
+	
+	private function buildInsertQuery($object)
+	{
+		$className = get_class($object);
+		$array = (array)$object;
+		
+		$query = "INSERT INTO ".$className." ";
+		
+		$array = (array)$object;
+		
+		foreach ($array as $varName => $varValue)
+		{
+			if (trim(substr($varName, 0, strlen($className)+1)) == $className)
+			{
+				$varName = substr($varName, strlen($className)+1);
+			}
+			
+			$varName = trim($varName);
+			
+			$methodName = 'get'.ucfirst($varName);
+			if (method_exists($object, $methodName))
+			{
+				$fieldNameList[] = $varName;
+				$valueNameList[] = ":p".$varName;
+			}	
+		}
+		
+		$query .= "(".implode(", ",$fieldNameList).")";
+		
+		$query .= " VALUES ";
+		
+		$query .= "(".implode(", ",$valueNameList).")";
+		
+		//echo $query;die();
+				
 		return $query;
 	}
 	
