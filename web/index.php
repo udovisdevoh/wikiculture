@@ -13,7 +13,7 @@
 		require_once("wikiList.php");
 		die();
 	}
-	else if ($article == null)
+	else if ($article == null) //Si aucun article trouvé, on le cré sur editArticle
 	{
 		//header('Location: wikiList.php');
 		require_once("editArticle.php");
