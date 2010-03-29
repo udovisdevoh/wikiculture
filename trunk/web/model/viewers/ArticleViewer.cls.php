@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class ArticleViewer
 {
@@ -15,7 +15,7 @@ class ArticleViewer
 		return $html;
 	}
 	
-	//Retourne le texte avec certains tag pars�s, par exemple:
+	//Retourne le texte avec certains tag parsés, par exemple:
 	//Lien vers un article: [nom de l'article]
 	//Lien vers un article sur une autre wiki: [nom de la wiki|nom de l'article]
 	public static function parseTags($rawText,$wiki)

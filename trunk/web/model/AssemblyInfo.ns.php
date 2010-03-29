@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 //Actions
 require_once("AbstractAction.cls.php");

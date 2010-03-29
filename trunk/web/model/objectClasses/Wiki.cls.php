@@ -1,12 +1,12 @@
-<?php
+ï»¿<?php
 
 class Wiki
 {
 	private $id; //Unique ID
 	
-	private $title; //Titre de la wiki également sous forme de clef unique
+	private $title; //Titre de la wiki Ã©galement sous forme de clef unique
 	
-	private $ownerList; //Liste des propriétaires de la wiki sous forme de liste de email dans une string
+	private $ownerList; //Liste des propriÃ©taires de la wiki sous forme de liste de email dans une string
 		
 	private $languageName; //Nom de fichier XML de langue (sans extension XML)
 	

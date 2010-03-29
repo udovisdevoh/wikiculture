@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 abstract class AbstractAction
 {
@@ -7,7 +7,7 @@ abstract class AbstractAction
 	
 	public function execute()
 	{
-		//v�rifie les droits
+		//vérifie les droits
 		//todo
 		
 		//Fait l'action

@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 
 class ArticleManager
 {
@@ -28,10 +28,10 @@ class ArticleManager
 		
 		$searchCriteriaList['wikiId'] = $wiki->getId();
 		
-		//C'est pas vraiment optimisé, j'en suis conscient. Il y aurait certainement facilement
-		//moyen d'optimiser cettet partie du code mais ce n'est pas une priorité et lorsque ce sera le cas,
-		//il sera très facile d'optimiser l'obtention de page au hasard sans avoir à modifier quoi que ce soit d'autre dans le code
-		//que ce qui est présent dans cette methode
+		//C'est pas vraiment optimisÃ©, j'en suis conscient. Il y aurait certainement facilement
+		//moyen d'optimiser cettet partie du code mais ce n'est pas une prioritÃ© et lorsque ce sera le cas,
+		//il sera trÃ¨s facile d'optimiser l'obtention de page au hasard sans avoir Ã  modifier quoi que ce soit d'autre dans le code
+		//que ce qui est prÃ©sent dans cette methode
 
 		$rowList = $dao->getRowList("article", $searchCriteriaList, null);
 		
