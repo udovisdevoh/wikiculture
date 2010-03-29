@@ -9,6 +9,7 @@
 			<edit>Modifier</edit>
 			<new>Créer</new>
 			<save>Sauvegarder</save>
+			<returnTo>Retour à</returnTo>
 		</article>
 		<menu>
 			<search>Recherche</search>
