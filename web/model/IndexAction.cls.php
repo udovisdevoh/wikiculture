@@ -1,14 +1,14 @@
-<?php
+ï»¿<?php
 
 class IndexAction extends AbstractAction
 {
-	//Wiki qui sera chargée ou null si aucune wiki choisie
+	//Wiki qui sera chargÃ©e ou null si aucune wiki choisie
 	private $wiki;
 	
-	//Article qui sera chargé ou null si aucun article
+	//Article qui sera chargÃ© ou null si aucun article
 	private $article;
 	
-	//Ne doit pas être appelé directement
+	//Ne doit pas Ãªtre appelÃ© directement
 	protected function doAction()
 	{
 		$this->wiki = WikiManager::getWiki($_GET['wiki_title']);
@@ -21,13 +21,13 @@ class IndexAction extends AbstractAction
 		}
 	}
 	
-	//Wiki qui sera chargée ou null si aucune wiki choisie
+	//Wiki qui sera chargÃ©e ou null si aucune wiki choisie
 	public function getWiki()
 	{
 		return $this->wiki;
 	}
 	
-	//Article qui sera chargé ou null si aucun article
+	//Article qui sera chargÃ© ou null si aucun article
 	public function getArticle()
 	{
 		return $this->article;

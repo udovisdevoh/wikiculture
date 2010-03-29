@@ -1,11 +1,11 @@
-<?php
+ï»¿<?php
 
 class WikiListAction extends AbstractAction
 {
 	//Liste de tous les Wiki
 	private $wikiList;
 	
-	//Ne doit pas être appelé directement
+	//Ne doit pas Ãªtre appelÃ© directement
 	protected function doAction()
 	{
 		$this->wikiList = WikiManager::getWikiList();

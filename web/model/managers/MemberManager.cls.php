@@ -1,14 +1,14 @@
-<?php
+ï»¿<?php
 
 class MemberManager
 {
-	//Retourne le user créé ou null si impossible à créer
+	//Retourne le user crÃ©Ã© ou null si impossible Ã  crÃ©er
 	public static function createGetMember($user, $password) 
 	{
 		//TODO
 	}
 	
-	//Retourne le user ou null si problème d'authentification
+	//Retourne le user ou null si problÃ¨me d'authentification
 	public static function tryGetMember($user, $password)
 	{
 		//TODO
