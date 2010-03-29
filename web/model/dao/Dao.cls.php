@@ -6,7 +6,7 @@ class Dao
 	
 	private $dbPassword = "a";
 	
-	private $dbAlias = "decinfo";	
+	private $dbAlias = "decinfo";
 
 	//Returns the first row from $tableName having criterias in $searchCritariaList array
 	public function getRow($tableName, $searchCritariaList)
@@ -142,6 +142,8 @@ class Dao
 		}
 		
 		oci_execute($statement);
+		
+		$this->releaseConnection($connection);
 					
 		$row = oci_fetch_array ($statement);
 		

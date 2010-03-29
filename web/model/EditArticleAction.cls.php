@@ -14,6 +14,15 @@ class EditArticleAction extends AbstractAction
 		$this->wiki = WikiManager::getWiki($_GET['wiki_title']);
 		$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
 		
+		print_r($this->article);
+		
+		if ($this->article == null)
+		{
+			$this->article = new Article();
+			$this->article->setTitle($_GET['article_title']);
+			$this->article->setContent("");
+		}
+		
 		if ($_POST['article_content'] != null)
 		{
 			$this->article->setContent(stripslashes($_POST['article_content']));

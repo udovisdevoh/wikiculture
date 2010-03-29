@@ -15,9 +15,10 @@ class IndexAction extends AbstractAction
 		
 		if ($this->wiki != null)
 		{
-			$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
-			if ($this->article == null)
+			if ($_GET['article_title'] == null)
 				$this->article = ArticleManager::getRandomArticle($this->wiki);
+			else
+				$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
 		}
 	}
 	
