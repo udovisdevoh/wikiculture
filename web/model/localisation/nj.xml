@@ -14,9 +14,9 @@
 			<returnTo>Retour à</returnTo>
 		</article>
 		<menu>
-			<login>Connection</login>
-			<logout>Déconnection</logout>
-			<search>Chercher</search>
+			<login>Se loguer</login>
+			<logout>Se déloguer</logout>
+			<search>Searcher</search>
 			<randomPage>Une page random</randomPage>
 			<contactUs>
 				<name>Nous contacter</name>
