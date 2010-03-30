@@ -27,6 +27,7 @@ require_once("viewers/ArticleEditorViewer.cls.php");
 require_once("viewers/MenuViewer.cls.php");
 require_once("viewers/WikiListViewer.cls.php");
 require_once("viewers/SearchFormViewer.cls.php");
+require_once("viewers/WikiEditorViewer.cls.php");
 
 //Dao
 require_once("dao/Dao.cls.php");

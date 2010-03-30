@@ -3,6 +3,7 @@
 	<language>
 		<languageName>Français</languageName>
 		<title>Titre</title>
+		<ownerList>Liste des propriétaires</ownerList>
 		<article>
 			<untitled>Sans-titre</untitled>
 			<name>Article</name>
