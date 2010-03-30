@@ -13,6 +13,11 @@ body
 	color:#AAB;
 	font-size:12px;
 	height:100%;
+	
+	background-image:url('../images/contentBackground.jpg');
+	background-repeat:no-repeat;
+	background-color:#000;
+	background-position:213px 0px;
 }
 
 a
@@ -109,9 +114,7 @@ div.Article
 	min-height:567px;
 	height:100%;
 	padding:10px;
-	width:900px;
-	background-image:url('../images/contentBackground.jpg');
-	background-repeat:no-repeat;
+	/*width:900px;*/
 }
 
 div.ArticleEditor
@@ -120,9 +123,7 @@ div.ArticleEditor
 	min-height:567px;
 	height:100%;
 	padding:10px;
-	width:900px;
-	background-image:url('../images/contentBackground.jpg');
-	background-repeat:no-repeat;
+	/*width:900px;*/
 }
 
 .ArticleEditor textarea

@@ -11,14 +11,14 @@ class IndexAction extends AbstractAction
 	//Ne doit pas être appelé directement
 	protected function doAction()
 	{
-		$this->wiki = WikiManager::getWiki($_GET['wiki_title']);
+		$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_title']));
 		
 		if ($this->wiki != null)
 		{
 			if ($_GET['article_title'] == null)
 				$this->article = ArticleManager::getRandomArticle($this->wiki);
 			else
-				$this->article = ArticleManager::getArticle($this->wiki, $_GET['article_title']);
+				$this->article = ArticleManager::getArticle($this->wiki, urldecode($_GET['article_title']));
 		}
 	}
 	

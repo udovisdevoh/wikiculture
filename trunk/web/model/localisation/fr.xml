@@ -12,6 +12,8 @@
 			<returnTo>Retour à</returnTo>
 		</article>
 		<menu>
+			<login>Connection</login>
+			<logout>Déconnection</logout>
 			<search>Recherche</search>
 			<randomPage>Une page au hazard</randomPage>
 			<contactUs>
@@ -21,6 +23,8 @@
 				<yourEmail>Votre adresse courriel</yourEmail>
 				<send>Envoyer</send>
 			</contactUs>
+			<newWiki>Créer une wiki</newWiki>
+			<editWiki>Propriétés de la wiki</editWiki>
 		</menu>
 	</language>
 </trunk>
