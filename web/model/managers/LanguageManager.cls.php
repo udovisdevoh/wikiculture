@@ -12,8 +12,19 @@ class LanguageManager
 	
 	public static function getLanguageList()
 	{
-		$languageNameList['fr'] = "Français";
-		$languageNameList['en'] = "English";
+		$path = "./model/localisation/";
+		$handle = @opendir($path) or die("Unable to open $path");
+		
+		while ($file = readdir($handle)) 
+		{
+			if (substr( $file, strlen( $file ) - strlen( ".xml" ) ) == ".xml" )
+			{
+				$languageName = substr($file,0,-4);				
+				$languageNameList[$languageName] = LanguageManager::getLanguage($languageName)->languageName;
+			}
+		}
+	
+
 		return $languageNameList;
 	}
 }
