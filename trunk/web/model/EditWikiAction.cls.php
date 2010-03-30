@@ -25,6 +25,7 @@ class EditWikiAction extends AbstractAction
 			$this->wiki->setTitle(stripslashes($_POST['wiki_title']));
 			$this->wiki->setId(stripslashes($_POST['wiki_id']));
 			$this->wiki->setOwnerList(stripslashes($_POST['wiki_ownerlist']));
+			$this->wiki->setLanguageName(stripslashes($_POST['wiki_languagename']));
 		
 			$dao = new Dao();
 			$dao->save($this->wiki);
