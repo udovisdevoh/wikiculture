@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<trunk>
+	<language>
+		<language>Langue</language>
+		<languageName>Neo-Joual</languageName>
+		<title>Titre</title>
+		<ownerList>Liste des owner</ownerList>
+		<article>
+			<untitled>Sans-nom</untitled>
+			<name>Article</name>
+			<edit>Editer</edit>
+			<new>Creater</new>
+			<save>Saver</save>
+			<returnTo>Retour à</returnTo>
+		</article>
+		<menu>
+			<login>Connection</login>
+			<logout>Déconnection</logout>
+			<search>Chercher</search>
+			<randomPage>Une page random</randomPage>
+			<contactUs>
+				<name>Nous contacter</name>
+				<yourName>Ton nom</yourName>
+				<yourMessage>Ton message</yourMessage>
+				<yourEmail>Ton email</yourEmail>
+				<send>Sender</send>
+			</contactUs>
+			<newWiki>Creater une wiki</newWiki>
+			<editWiki>Editer la wiki</editWiki>
+		</menu>
+	</language>
+</trunk>
