@@ -3,6 +3,7 @@
 	<language>
 		<languageName>English</languageName>
 		<title>Title</title>
+		<ownerList>Owner List</ownerList>
 		<article>
 			<untitled>Untitled</untitled>
 			<name>Article</name>

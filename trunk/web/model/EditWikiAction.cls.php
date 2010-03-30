@@ -8,20 +8,27 @@ class EditWikiAction extends AbstractAction
 	//Ne doit pas être appelé directement
 	protected function doAction()
 	{
-		$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_title']));
-		
-		/*if ($_POST['article_content'] != null)
-		{
-			if ($this->article->getId() == null)
-				$this->article->setId($dao->getSequenceNextValue($this->article));
-		
-			$this->article->setContent(stripslashes($_POST['article_content']));
-			$this->article->setWikiId($this->wiki->getId());
-			$dao = new Dao();
-
+		if ($_GET['wiki_id'] != null)
+			$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_id']));
+		else
+			$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_title']));
 			
-			$dao->save($this->article);
-		}*/
+		if ($this->wiki == null)
+		{
+			$dao = new Dao();
+			$this->wiki = new Wiki();
+			$this->wiki->setId($dao->getSequenceNextValue($this->wiki));
+		}
+		
+		if ($_POST['wiki_id'] != null)
+		{
+			$this->wiki->setTitle(stripslashes($_POST['wiki_title']));
+			$this->wiki->setId(stripslashes($_POST['wiki_id']));
+			$this->wiki->setOwnerList(stripslashes($_POST['wiki_ownerlist']));
+		
+			$dao = new Dao();
+			$dao->save($this->wiki);
+		}
 	}
 	
 	//Wiki qui sera chargée ou null si aucune wiki choisie
