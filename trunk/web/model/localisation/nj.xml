@@ -4,7 +4,7 @@
 		<language>Langue</language>
 		<languageName>Neo-Joual</languageName>
 		<title>Titre</title>
-		<ownerList>Liste des owner</ownerList>
+		<ownerList>Liste des owners</ownerList>
 		<article>
 			<untitled>Sans-nom</untitled>
 			<name>Article</name>
@@ -14,10 +14,10 @@
 			<returnTo>Retour à</returnTo>
 		</article>
 		<menu>
-			<login>Se loguer</login>
-			<logout>Se déloguer</logout>
+			<login>Jointer</login>
+			<logout>Déjointer</logout>
 			<search>Searcher</search>
-			<randomPage>Une page random</randomPage>
+			<randomPage>Une page nowhere</randomPage>
 			<contactUs>
 				<name>Nous contacter</name>
 				<yourName>Ton nom</yourName>
