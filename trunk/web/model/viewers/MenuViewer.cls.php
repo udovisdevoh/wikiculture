@@ -12,7 +12,7 @@ class MenuViewer
 		
 		$html .= '<div class="LeftMenu">';
 			$html .= '<img src="images/wikiCulture.png" alt="WikiCulture" style="margin-left:-10px" />';
-			$html .= "<ul>";
+			$html .= "<ul>";			
 				$html .= "<li>";
 					$html .= '<a href="login.php">'.$language->menu->login.'</a>';
 				$html .= "</li>";
@@ -25,6 +25,10 @@ class MenuViewer
 						$html .= '<a href="editArticle.php?wiki_title='.urlencode($wiki->getTitle()).'&amp;article_title='.urlencode($article->getTitle()).'">'.$language->article->edit.'</a>';
 					$html .= "</li>";
 				}
+				$html .= "<li>";
+					$html .= '<a href="./">'.$language->wikiList.'</a>';
+				$html .= "</li>";
+				
 				$html .= "<li>";
 					$html .= '<a href="./?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->randomPage.'</a>';
 				$html .= "</li>";
