@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <trunk>
 	<language>
+		<language>Langue</language>
 		<languageName>Français</languageName>
 		<title>Titre</title>
 		<ownerList>Liste des propriétaires</ownerList>

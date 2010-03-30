@@ -9,6 +9,13 @@ class LanguageManager
 		$fullArray = $xml->xpath("language");
 		return $fullArray[0];
 	}
+	
+	public static function getLanguageList()
+	{
+		$languageNameList['fr'] = "Français";
+		$languageNameList['en'] = "English";
+		return $languageNameList;
+	}
 }
 
 ?>

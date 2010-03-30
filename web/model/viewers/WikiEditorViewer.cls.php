@@ -18,7 +18,11 @@ class WikiEditorViewer
 				$html .= '<div>';
 					$html .= $language->ownerList.': <textarea cols="40" rows="5" name="wiki_ownerlist">'.$wiki->getOwnerList().'</textarea>';
 				$html .= '</div>';
-
+				
+				$html .= '<div>';
+					$html .= WikiEditorViewer::getHtmlCodeSelectLanguage($wiki,$language);
+				$html .= '</div>';
+				
 				$html .= '<div>';
 					$html .= '<input type="submit" name="submit" value="'.$language->article->save.'" />';
 				$html .= '</div>';
@@ -29,6 +33,28 @@ class WikiEditorViewer
 		$html .= "CKEDITOR.replace( 'article_content' );\n";
 		$html .= "</script>\n";
 		
+		return $html;
+	}
+	
+	//Retourne un select box pour choisir langue
+	private static function getHtmlCodeSelectLanguage($wiki,$language)
+	{
+		$html = "";
+		
+		$html .= $language->language.": ";
+		$html .= '<select name="wiki_language">';
+		
+		$html .= '<option name="wiki_languagename" value="'.$wiki->getLanguageName().'">'.$language->languageName.'</option>';
+		foreach (LanguageManager::getLanguageList() as $key => $value)
+		{
+			if ($key != $wiki->getLanguageName())
+			{
+				$html .= '<option name="wiki_languagename" value="'.$key.'">'.$value.'</option>';
+			}
+		}
+		
+		$html .= '</select>';
+	
 		return $html;
 	}
 }
