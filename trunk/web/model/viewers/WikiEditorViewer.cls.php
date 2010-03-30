@@ -42,14 +42,14 @@ class WikiEditorViewer
 		$html = "";
 		
 		$html .= $language->language.": ";
-		$html .= '<select name="wiki_language">';
+		$html .= '<select name="wiki_languagename">';
 		
-		$html .= '<option name="wiki_languagename" value="'.$wiki->getLanguageName().'">'.$language->languageName.'</option>';
+		$html .= '<option value="'.$wiki->getLanguageName().'">'.$language->languageName.'</option>';
 		foreach (LanguageManager::getLanguageList() as $key => $value)
 		{
 			if ($key != $wiki->getLanguageName())
 			{
-				$html .= '<option name="wiki_languagename" value="'.$key.'">'.$value.'</option>';
+				$html .= '<option value="'.$key.'">'.$value.'</option>';
 			}
 		}
 		
