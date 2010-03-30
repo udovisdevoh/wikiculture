@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<trunk>
+	<language>
+		<language>Guelan</language>
+		<languageName>Verlan</languageName>
+		<title>Treti</title>
+		<ownerList>Telis des props</ownerList>
+		<article>
+			<untitled>Sans-treti</untitled>
+			<name>Ticlar</name>
+			<edit>Modifier</edit>
+			<new>Créer</new>
+			<save>Dergarsauve</save>
+			<returnTo>Back à</returnTo>
+		</article>
+		<menu>
+			<login>Tionneccon</login>
+			<logout>Tionneccondé</logout>
+			<search>Cherchere</search>
+			<randomPage>Nu gepa au zarda</randomPage>
+			<contactUs>
+				<name>Oun-drejoin</name>
+				<yourName>Trevo nom</yourName>
+				<yourMessage>Trevo sagemé</yourMessage>
+				<yourEmail>Votre dressa de mèl</yourEmail>
+				<send>Évoyen</send>
+			</contactUs>
+			<newWiki>Écré nu kiwi</newWiki>
+			<editWiki>Tépriépro ed al kiwi</editWiki>
+		</menu>
+	</language>
+</trunk>
