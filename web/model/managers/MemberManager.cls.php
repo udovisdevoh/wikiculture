@@ -14,5 +14,3 @@ class MemberManager
 		//TODO
 	}
 }
-
-?>

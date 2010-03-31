@@ -56,5 +56,3 @@ class Article
 		return $this->wikiId;
 	}
 }
-
-?>

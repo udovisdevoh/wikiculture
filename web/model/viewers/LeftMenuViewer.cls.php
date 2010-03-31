@@ -37,5 +37,3 @@ class LeftMenuViewer
 		return $html;
 	}
 }
-
-?>

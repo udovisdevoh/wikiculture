@@ -17,5 +17,3 @@ class WikiListAction extends AbstractAction
 		return $this->wikiList;
 	}
 }
-
-?>

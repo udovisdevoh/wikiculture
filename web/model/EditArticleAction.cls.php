@@ -49,5 +49,3 @@ class EditArticleAction extends AbstractAction
 		return $this->article;
 	}
 }
-
-?>

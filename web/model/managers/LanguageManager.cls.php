@@ -28,5 +28,3 @@ class LanguageManager
 		return $languageNameList;
 	}
 }
-
-?>

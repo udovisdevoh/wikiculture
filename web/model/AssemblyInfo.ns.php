@@ -34,5 +34,3 @@ require_once("viewers/WikiEditorViewer.cls.php");
 require_once("dao/Dao.cls.php");
 
 error_reporting(E_ALL ^ E_NOTICE);
-
-?>

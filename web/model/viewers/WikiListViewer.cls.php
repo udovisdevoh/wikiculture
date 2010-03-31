@@ -23,5 +23,3 @@ class WikiListViewer
 		return $html;
 	}
 }
-
-?>

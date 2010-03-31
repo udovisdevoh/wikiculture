@@ -8,7 +8,7 @@ class SearchFormViewer
 	
 		$html = "";
 		
-		$html .= '<form method="get" action="./">';
+		$html .= '<form method="get" action="searchArticle.php">';
 			$html .= '<p>';
 				$html .= '<input type="text" name="searchCriteria" value="'.urldecode($_GET['searchCriteria']).'" />';
 				$html .= '<input type="hidden" name="wiki_title" value="'.urldecode($wiki->getTitle()).'" />';
@@ -21,5 +21,3 @@ class SearchFormViewer
 		return $html;
 	}
 }
-
-?>

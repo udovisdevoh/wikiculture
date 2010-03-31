@@ -57,5 +57,3 @@ class Wiki
 		$this->id = $id;
 	}
 }
-
-?>

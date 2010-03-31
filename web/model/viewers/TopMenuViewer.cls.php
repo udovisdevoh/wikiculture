@@ -28,5 +28,3 @@ class TopMenuViewer
 		return $html;
 	}
 }
-
-?>

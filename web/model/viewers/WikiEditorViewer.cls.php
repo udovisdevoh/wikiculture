@@ -58,5 +58,3 @@ class WikiEditorViewer
 		return $html;
 	}
 }
-
-?>

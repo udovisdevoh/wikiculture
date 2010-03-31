@@ -8,5 +8,3 @@ class Member
 	
 	private $passwordMd5; //Password in MD5 format
 }
-
-?>
