@@ -13,7 +13,7 @@ class WikiManager
 		else
 			$searchCriteriaList['title'] = $wikiTitleOrId;
 		
-		$row = $dao->getRow("wiki", $searchCriteriaList);
+		$row = $dao->getRow("wiki", $searchCriteriaList,null);
 		
 		if (!is_array($row))
 			return null;
@@ -28,7 +28,7 @@ class WikiManager
 	{
 		$dao = new Dao();
 		
-		$rowList = $dao->getRowList("wiki", null, null);
+		$rowList = $dao->getRowList("wiki", null, null,null);
 		
 		if (is_array($rowList))
 		{

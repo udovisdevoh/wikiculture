@@ -10,7 +10,7 @@ class ArticleManager
 		
 		$searchCriteriaList['title'] = $articleTitle;
 		
-		$row = $dao->getRow("article", $searchCriteriaList);
+		$row = $dao->getRow("article", $searchCriteriaList,null);
 		
 		if (!is_array($row))			
 			return null;
@@ -33,7 +33,7 @@ class ArticleManager
 		//il sera très facile d'optimiser l'obtention de page au hasard sans avoir à modifier quoi que ce soit d'autre dans le code
 		//que ce qui est présent dans cette methode
 
-		$rowList = $dao->getRowList("article", $searchCriteriaList, null);
+		$rowList = $dao->getRowList("article", $searchCriteriaList, null,null);
 		
 		if (is_array($rowList))
 		{
