@@ -20,7 +20,8 @@
 	</head>
 	<body>
 		<?php
-			echo MenuViewer::getHtmlCode($wiki, $article);
+			echo LeftMenuViewer::getHtmlCode($wiki, $article);
+			echo TopMenuViewer::getHtmlCode($wiki, $article);
 			echo ArticleEditorViewer::getHtmlCode($wiki, $article);
 		?>
 	</body>

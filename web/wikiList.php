@@ -19,5 +19,8 @@
 		<?php
 			echo WikiListViewer::getHtmlCode($wikiList);
 		?>
+		<p>
+			<a href=".\editWiki.php">Start a new wiki</a>
+		</p>
 	</body>
 </html>

@@ -24,7 +24,8 @@ require_once("managers/WikiManager.cls.php");
 //Viewers
 require_once("viewers/ArticleViewer.cls.php");
 require_once("viewers/ArticleEditorViewer.cls.php");
-require_once("viewers/MenuViewer.cls.php");
+require_once("viewers/LeftMenuViewer.cls.php");
+require_once("viewers/TopMenuViewer.cls.php");
 require_once("viewers/WikiListViewer.cls.php");
 require_once("viewers/SearchFormViewer.cls.php");
 require_once("viewers/WikiEditorViewer.cls.php");
