@@ -28,5 +28,3 @@ class ArticleEditorViewer
 		return $html;
 	}
 }
-
-?>

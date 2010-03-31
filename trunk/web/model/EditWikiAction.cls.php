@@ -38,5 +38,3 @@ class EditWikiAction extends AbstractAction
 		return $this->wiki;
 	}
 }
-
-?>

@@ -14,5 +14,3 @@ abstract class AbstractAction
 		$this->doAction();
 	}
 }
-
-?>

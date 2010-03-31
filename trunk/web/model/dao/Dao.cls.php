@@ -278,5 +278,3 @@ class Dao
 		oci_close($connection);
 	}	
 }
-
-?>

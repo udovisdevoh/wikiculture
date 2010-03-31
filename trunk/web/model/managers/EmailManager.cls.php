@@ -3,5 +3,3 @@
 class EmailManager
 {
 }
-
-?>

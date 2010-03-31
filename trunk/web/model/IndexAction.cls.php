@@ -34,5 +34,3 @@ class IndexAction extends AbstractAction
 		return $this->article;
 	}
 }
-
-?>

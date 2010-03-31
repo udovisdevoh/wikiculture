@@ -43,5 +43,3 @@ class WikiManager
 		return $wikiList;
 	}
 }
-
-?>
