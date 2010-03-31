@@ -16,8 +16,8 @@ class SearchArticleAction extends AbstractAction
 		if ($this->wiki != null)
 		{
 			$this->article = SearchManager::getArticle($this->wiki, urldecode($_GET['searchCriteria']));
-			if ($this->article == null)
-				$this->article = SearchManager::getRandomArticle($this->wiki);
+			/*if ($this->article == null)
+				$this->article = ArticleManager::getRandomArticle($this->wiki);*/
 		}
 	}
 	

@@ -9,11 +9,15 @@ class Dao
 	private $dbAlias = "decinfo";
 
 	//Returns the first row from $tableName having criterias in $searchCritariaList array
-	public function getRow($tableName, $searchCritariaList)
+	//If operator is null, operator will be "="
+	public function getRow($tableName, $searchCritariaList, $operator)
 	{
+		if ($operator == null)
+			$operator = "=";
+	
 		$connection = $this->getConnection();
 		
-		$query = $this->buildSelectQuery($tableName, $searchCritariaList,null);	
+		$query = $this->buildSelectQuery($tableName, $searchCritariaList,null,$operator);	
 		
 		$statement = oci_parse($connection, $query);
 		
@@ -21,7 +25,7 @@ class Dao
 		{
 			foreach ($searchCritariaList as $key => $value)
 			{
-				oci_bind_by_name($statement, ":p".$key, $value);
+				oci_bind_by_name($statement, ":p".$key, strtolower($value));
 			}
 		}
 		
@@ -35,12 +39,16 @@ class Dao
 	}
 	
 	//Retourne une liste de row de la table $tableName selon les criteres dans $searchCritariaList par ordre de $orderByColumnName
-	//$searchCritariaList et $orderByColumnName peuvent très bien être nul
-	public function getRowList($tableName, $searchCritariaList, $orderByColumnName)
+	//$searchCritariaList et $orderByColumnName peuvent très bien être null
+	//If operator is null, operator will be "="
+	public function getRowList($tableName, $searchCritariaList, $orderByColumnName, $operator)
 	{
+		if ($operator == null)
+			$operator = "=";
+			
 		$connection = $this->getConnection();
 		
-		$query = $this->buildSelectQuery($tableName, $searchCritariaList, $orderByColumnName);	
+		$query = $this->buildSelectQuery($tableName, $searchCritariaList, $orderByColumnName,$operator);	
 		
 		$statement = oci_parse($connection, $query);
 		
@@ -48,7 +56,7 @@ class Dao
 		{
 			foreach ($searchCritariaList as $key => $value)
 			{
-				oci_bind_by_name($statement, ":p".$key, $value);
+				oci_bind_by_name($statement, ":p".$key, strtolower($value));
 			}
 		}
 		
@@ -155,7 +163,7 @@ class Dao
 		
 		
 		
-		$query = $this->buildSelectQuery($tableName, $searchCritariaList,null);	
+		$query = $this->buildSelectQuery($tableName, $searchCritariaList,null,null);	
 		
 		$statement = oci_parse($connection, $query);
 		
@@ -180,15 +188,19 @@ class Dao
 	}
 	
 	// $searchCritariaList and $orderByColumnName can be null
-	private function buildSelectQuery($tableName, $searchCritariaList, $orderByColumnName)
+	//If operator is null, it will be "="
+	private function buildSelectQuery($tableName, $searchCritariaList, $orderByColumnName, $operator)
 	{
+		if ($operator == null)
+			$operator = '=';
+			
 		$query = "SELECT * FROM ".$tableName;
 		if (is_array($searchCritariaList) && count($searchCritariaList) > 0)
 		{
 			$query .= " WHERE ";
 			foreach ($searchCritariaList as $key => $value)
 			{
-				$whereCriteria[] = $key." = :p".$key;
+				$whereCriteria[] = "lower(".$key.") ".$operator." :p".$key;
 			}
 			$query .= implode(" AND ", $whereCriteria);
 		}
