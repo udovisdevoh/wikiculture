@@ -96,8 +96,6 @@ textarea
 
 div.LeftMenu
 {
-	/*border-style:dotted;
-	border-width:1px;*/
 	float:left;
 	min-height:576px;
 	padding:10px;
@@ -106,6 +104,11 @@ div.LeftMenu
 	background-image:url('../images/sideBackground.jpg');
 	background-repeat:no-repeat;
 	height:100%;
+}
+
+div.TopMenu
+{
+	margin-left:10px;
 }
 
 div.Article

@@ -10,7 +10,7 @@ class ArticleEditorViewer
 		
 		$html .= '<div class="ArticleEditor">';		
 			$html .= '<h1>'.$wiki->getTitle().' : '.$article->getTitle().'</h1>';	
-			$html .= '<p><a href="./?wiki_title='.urlencode($wiki->getTitle()).'&amp;article_title='.urlencode($article->getTitle()).'">'.$language->article->returnTo.' '.$article->getTitle().'</a></p>';
+			$html .= '<p>< <a href="./?wiki_title='.urlencode($wiki->getTitle()).'&amp;article_title='.urlencode($article->getTitle()).'">'.$language->article->returnTo.' '.$article->getTitle().'</a></p>';
 			$html .= '<form method="post" action="'.$_SERVER["REQUEST_URI"].'">';
 				$html .= '<div>';
 					$html .= '<textarea cols="100" rows="55" name="article_content">'.$article->getContent().'</textarea>';
