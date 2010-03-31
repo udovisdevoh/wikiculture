@@ -6,6 +6,7 @@ require_once("IndexAction.cls.php");
 require_once("EditArticleAction.cls.php");
 require_once("WikiListAction.cls.php");
 require_once("EditWikiAction.cls.php");
+require_once("SearchArticleAction.cls.php");
 
 //Object classes
 require_once("objectClasses/Wiki.cls.php");
