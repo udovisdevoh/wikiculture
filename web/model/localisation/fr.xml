@@ -20,6 +20,7 @@
 			<subscribe>S'enregistrer</subscribe>
 			<search>Recherche</search>
 			<randomPage>Une page au hazard</randomPage>
+			<imageUpload>Téléverser une image</imageUpload>
 			<contactUs>
 				<name>Nous-joindre</name>
 				<yourName>Votre nom</yourName>

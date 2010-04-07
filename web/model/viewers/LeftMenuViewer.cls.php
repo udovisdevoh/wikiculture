@@ -31,6 +31,9 @@ class LeftMenuViewer
 					$html .= "<li>";
 						$html .= '<a href="editWiki.php?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->editWiki.'</a>';
 					$html .= "</li>";
+					$html .= "<li>";
+						$html .= '<a href="imageUpload.php">'.$language->menu->imageUpload.'</a>';
+					$html .= "</li>";
 				}
 				
 			$html .= "</ul>";
