@@ -56,4 +56,22 @@ class Wiki
 	{
 		$this->id = $id;
 	}
+	
+	public function isMemberOwner($emailAddress)
+	{
+		$emailAddress = trim($emailAddress);
+		
+		$this->ownerList = str_replace(" ","\n",$this->ownerList);
+		$this->ownerList = str_replace("\r","\n",$this->ownerList);
+		$this->ownerList = str_replace("\t","\n",$this->ownerList);
+		$this->ownerList = str_replace(",","\n",$this->ownerList);
+		
+		while (strstr($this->ownerList,"\n\n"))
+			$this->ownerList = str_replace("\n\n", "\n",$this->ownerList);
+		
+		$ownerList = explode("\n",$this->ownerList);
+		
+		
+		return strlen($emailAddress) > 0 && in_array($emailAddress, $ownerList);
+	}
 }

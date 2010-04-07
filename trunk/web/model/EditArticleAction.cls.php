@@ -22,16 +22,18 @@ class EditArticleAction extends AbstractAction
 			$this->article->setTitle($_GET['article_title']);
 			$this->article->setContent("");
 		}
-		
+		 
 		if ($_POST['article_content'] != null)
 		{
+			if (!$this->wiki->isMemberOwner($_SESSION['email_address']))
+				die("permission denied");
+		
 			if ($this->article->getId() == null)
 				$this->article->setId($dao->getSequenceNextValue($this->article));
 		
 			$this->article->setContent(stripslashes($_POST['article_content']));
 			$this->article->setWikiId($this->wiki->getId());
 			$dao = new Dao();
-
 			
 			$dao->save($this->article);
 		}

@@ -26,13 +26,24 @@ class EditWikiAction extends AbstractAction
 			$this->wiki->setId($dao->getSequenceNextValue($this->wiki));
 			$this->wiki->setOwnerList($_SESSION['email_address']);
 		}
+		else
+		{
+			if (!$this->wiki->isMemberOwner($_SESSION['email_address']))
+				die("permission denied");
+		}
 		
 		if ($_POST['wiki_id'] != null)
 		{
+			if (!$this->wiki->isMemberOwner($_SESSION['email_address']))
+				die("permission denied");
+		
 			$this->wiki->setTitle(stripslashes($_POST['wiki_title']));
 			$this->wiki->setId(stripslashes($_POST['wiki_id']));
 			$this->wiki->setOwnerList(stripslashes($_POST['wiki_ownerlist']));
 			$this->wiki->setLanguageName(stripslashes($_POST['wiki_languagename']));
+		
+			if (!$this->wiki->isMemberOwner($_SESSION['email_address']))
+				die("can't remove your rights");
 		
 			$dao = new Dao();
 			$dao->save($this->wiki);
