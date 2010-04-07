@@ -20,7 +20,7 @@ class SubscribeAction extends AbstractAction
 						
 			if (strlen($_POST['member_emailaddress']) > 0)
 			{
-				$this->messageList[] = 'Invalid email or password';
+				$this->messageList[] = 'User already exist';
 			}
 		}
 		else

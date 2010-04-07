@@ -34,7 +34,6 @@ class MemberManager
 		
 		
 		$searchCriteriaList['emailaddress'] = $emailAddress;
-		$searchCriteriaList['passwordmd5'] = $passwordMd5;
 		
 		$row = $dao->getRow("member", $searchCriteriaList,null);
 		
