@@ -13,6 +13,9 @@ class ImageUploadAction extends AbstractAction
 	{
 		$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_title']));
 		
+		if (!$this->wiki->isMemberOwner($_SESSION['email_address']))
+			die("permission denied");
+				
 		$target_path = "uploads/";
 		$target_path = $target_path . basename( $_FILES['uploadedfile']['name']); 
 
