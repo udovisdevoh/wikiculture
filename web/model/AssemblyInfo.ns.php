@@ -11,6 +11,7 @@ require_once("WikiListAction.cls.php");
 require_once("EditWikiAction.cls.php");
 require_once("SearchArticleAction.cls.php");
 require_once("LoginAction.cls.php");
+require_once("SubscribeAction.cls.php");
 require_once("LogoutAction.cls.php");
 require_once("ContactUsAction.cls.php");
 
