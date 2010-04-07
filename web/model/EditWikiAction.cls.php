@@ -8,6 +8,12 @@ class EditWikiAction extends AbstractAction
 	//Ne doit pas être appelé directement
 	protected function doAction()
 	{
+		if ($_SESSION['email_address'] == null)
+		{
+			require_once('login.php');
+			die();
+		}
+	
 		if ($_GET['wiki_id'] != null)
 			$this->wiki = WikiManager::getWiki(urldecode($_GET['wiki_id']));
 		else
@@ -18,6 +24,7 @@ class EditWikiAction extends AbstractAction
 			$dao = new Dao();
 			$this->wiki = new Wiki();
 			$this->wiki->setId($dao->getSequenceNextValue($this->wiki));
+			$this->wiki->setOwnerList($_SESSION['email_address']);
 		}
 		
 		if ($_POST['wiki_id'] != null)
