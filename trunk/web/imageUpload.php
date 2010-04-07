@@ -5,6 +5,7 @@
 	$imageUploadAction->execute();
 	
 	$wiki = $imageUploadAction->getWiki();
+	$uploadedImageUrl = $imageUploadAction->getUploadedImageUrl();
 	
 	if ($wiki == null) //Si aucune wiki, on affiche la liste des wiki
 	{
@@ -27,7 +28,11 @@
 		<?php
 			echo LeftMenuViewer::getHtmlCode($wiki, $article);
 			echo TopMenuViewer::getHtmlCode($wiki, $article);
-			echo ImageUploadViewer::getHtmlCode($wiki);
+			
+			if ($uploadedImageUrl != null)
+				echo '<p>'.$uploadedImageUrl.'</p><div><img src="'.$uploadedImageUrl.'" alt="'.$uploadedImageUrl.'" /></div>';
+			else
+				echo ImageUploadViewer::getHtmlCode($wiki);
 		?>
 	</body>
 </html>
