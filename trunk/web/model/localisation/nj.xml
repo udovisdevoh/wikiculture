@@ -24,6 +24,7 @@
 				<yourName>Ton nom</yourName>
 				<yourMessage>Ton message</yourMessage>
 				<yourEmail>Ton email</yourEmail>
+				<thankYou>Merci, cependant ce message sera ignoré car on ne les lit jamais.</thankYou>
 				<send>Sender</send>
 			</contactUs>
 			<newWiki>Creater une wiki</newWiki>

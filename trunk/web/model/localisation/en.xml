@@ -24,6 +24,7 @@
 				<yourName>Your name</yourName>
 				<yourMessage>Your message</yourMessage>
 				<yourEmail>Your email</yourEmail>
+				<thankYou>Thank you but we never read our emails.</thankYou>
 				<send>Send</send>
 			</contactUs>
 			<newWiki>New Wiki</newWiki>
