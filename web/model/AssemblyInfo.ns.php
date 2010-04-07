@@ -14,6 +14,7 @@ require_once("LoginAction.cls.php");
 require_once("SubscribeAction.cls.php");
 require_once("LogoutAction.cls.php");
 require_once("ContactUsAction.cls.php");
+require_once("ImageUploadAction.cls.php");
 
 //Object classes
 require_once("objectClasses/Wiki.cls.php");
@@ -39,6 +40,7 @@ require_once("viewers/SearchFormViewer.cls.php");
 require_once("viewers/WikiEditorViewer.cls.php");
 require_once("viewers/MemberViewer.cls.php");
 require_once("viewers/ContactUsViewer.cls.php");
+require_once("viewers/ImageUploadViewer.cls.php");
 
 //Dao
 require_once("dao/Dao.cls.php");
