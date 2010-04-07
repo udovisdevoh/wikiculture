@@ -26,13 +26,13 @@ class LeftMenuViewer
 				$html .= "<li>";
 					$html .= '<a href="editWiki.php">'.$language->menu->newWiki.'</a>';
 				$html .= "</li>";
-				if ($article != null && $wiki->isMemberOwner($_SESSION['email_address']))
+				if ($wiki->isMemberOwner($_SESSION['email_address']))
 				{
 					$html .= "<li>";
 						$html .= '<a href="editWiki.php?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->editWiki.'</a>';
 					$html .= "</li>";
 					$html .= "<li>";
-						$html .= '<a href="imageUpload.php">'.$language->menu->imageUpload.'</a>';
+						$html .= '<a href="imageUpload.php?wiki_title='.urlencode($wiki->getTitle()).'">'.$language->menu->imageUpload.'</a>';
 					$html .= "</li>";
 				}
 				
