@@ -5,5 +5,4 @@
 	$logoutAction->execute();
 
 	//header('Location: ./');
-	require_once("index.php");
-	die();
+	$logoutAction->forward(urldecode($_GET['referrer']));

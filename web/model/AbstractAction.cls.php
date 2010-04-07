@@ -13,4 +13,9 @@ abstract class AbstractAction
 		//Fait l'action
 		$this->doAction();
 	}
+	
+	public function forward($url)
+	{
+		echo '<script language="Javascript">location.href="'.$url.'"</script>';
+	}
 }
