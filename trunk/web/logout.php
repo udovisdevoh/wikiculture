@@ -4,5 +4,5 @@
 	$logoutAction = new LogoutAction();
 	$logoutAction->execute();
 
-	//header('Location: ./');
+	//header('Location: '.urldecode($_GET['referrer']));
 	$logoutAction->forward(urldecode($_GET['referrer']));
