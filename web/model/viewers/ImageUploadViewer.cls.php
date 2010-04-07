@@ -16,8 +16,6 @@ class ImageUploadViewer
 					$html .= '<input name="uploadedfile" type="file" /><br />';
 					$html .= '<input type="submit" value="'.$language->menu->imageUpload.'" />';
 				$html .= '</div>';
-				$html .= '<div>';
-				$html .= '</div>';
 			$html .= '</form>';
 		$html .= '</div>';		
 		
