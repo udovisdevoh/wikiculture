@@ -41,6 +41,7 @@ require_once("viewers/WikiEditorViewer.cls.php");
 require_once("viewers/MemberViewer.cls.php");
 require_once("viewers/ContactUsViewer.cls.php");
 require_once("viewers/ImageUploadViewer.cls.php");
+require_once("viewers/GoogleMapViewer.cls.php");
 
 //Dao
 require_once("dao/Dao.cls.php");
