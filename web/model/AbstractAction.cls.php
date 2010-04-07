@@ -17,5 +17,6 @@ abstract class AbstractAction
 	public function forward($url)
 	{
 		echo '<script language="Javascript">location.href="'.$url.'"</script>';
+		die();
 	}
 }
