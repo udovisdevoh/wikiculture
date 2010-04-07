@@ -18,7 +18,7 @@ class TopMenuViewer
 			if ($_SESSION['email_address'] != null)
 			{
 				$html .= "<span>";
-					$html .= '<a href="logout.php">'.$language->menu->logout.'</a>';
+					$html .= $_SESSION['email_address'].' <a href="logout.php">'.$language->menu->logout.'</a>';
 				$html .= "</span> | ";
 			}
 			if ($article != null)
