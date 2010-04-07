@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require_once('model/AssemblyInfo.ns.php');
 	
 	$editArticleAction = new EditArticleAction();

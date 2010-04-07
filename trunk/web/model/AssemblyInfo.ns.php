@@ -1,4 +1,7 @@
-﻿<?php
+<?php
+session_start();
+
+require_once('model/AssemblyInfo.ns.php');
 
 //Actions
 require_once("AbstractAction.cls.php");
@@ -7,6 +10,7 @@ require_once("EditArticleAction.cls.php");
 require_once("WikiListAction.cls.php");
 require_once("EditWikiAction.cls.php");
 require_once("SearchArticleAction.cls.php");
+require_once("LoginAction.cls.php");
 
 //Object classes
 require_once("objectClasses/Wiki.cls.php");
@@ -30,6 +34,7 @@ require_once("viewers/TopMenuViewer.cls.php");
 require_once("viewers/WikiListViewer.cls.php");
 require_once("viewers/SearchFormViewer.cls.php");
 require_once("viewers/WikiEditorViewer.cls.php");
+require_once("viewers/MemberViewer.cls.php");
 
 //Dao
 require_once("dao/Dao.cls.php");
