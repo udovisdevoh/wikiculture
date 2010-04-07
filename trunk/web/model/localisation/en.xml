@@ -20,6 +20,7 @@
 			<subscribe>Subscribe</subscribe>
 			<search>Search</search>
 			<randomPage>Random page</randomPage>
+			<imageUpload>Upload image</imageUpload>
 			<contactUs>
 				<name>Contact us</name>
 				<yourName>Your name</yourName>

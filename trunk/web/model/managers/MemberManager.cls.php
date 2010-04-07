@@ -46,7 +46,6 @@ class MemberManager
 		$member->setId($dao->getSequenceNextValue($member));
 		
 		
-		
 		$dao->save($member);
 		
 		return $member;
