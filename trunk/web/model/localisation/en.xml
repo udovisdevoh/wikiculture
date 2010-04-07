@@ -17,6 +17,7 @@
 		<menu>
 			<login>Login</login>
 			<logout>Logout</logout>
+			<subscribe>Subscribe</subscribe>
 			<search>Search</search>
 			<randomPage>Random page</randomPage>
 			<contactUs>

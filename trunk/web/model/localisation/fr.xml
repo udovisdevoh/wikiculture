@@ -17,6 +17,7 @@
 		<menu>
 			<login>Connection</login>
 			<logout>Déconnection</logout>
+			<subscribe>S'enregistrer</subscribe>
 			<search>Recherche</search>
 			<randomPage>Une page au hazard</randomPage>
 			<contactUs>

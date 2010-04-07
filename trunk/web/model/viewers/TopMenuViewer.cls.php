@@ -10,17 +10,23 @@ class TopMenuViewer
 	
 		$html = "";
 		
-		$html .= '<div class="TopMenu">';	
-			$html .= '<span>';
-				$html .= '<a href="login.php?referrer='.urlencode($_SERVER['REQUEST_URI']).'">'.$language->menu->login.'</a>';
-			$html .= "</span> | ";
-			
+		$html .= '<div class="TopMenu">';				
 			if ($_SESSION['email_address'] != null)
 			{
 				$html .= "<span>";
 					$html .= $_SESSION['email_address'].' <a href="logout.php?referrer='.urlencode($_SERVER['REQUEST_URI']).'">'.$language->menu->logout.'</a>';
 				$html .= "</span> | ";
 			}
+			else
+			{
+				$html .= '<span>';
+					$html .= '<a href="login.php?referrer='.urlencode($_SERVER['REQUEST_URI']).'">'.$language->menu->login.'</a>';
+				$html .= "</span> | ";
+				$html .= '<span>';
+					$html .= '<a href="subscribe.php?referrer='.urlencode($_SERVER['REQUEST_URI']).'">'.$language->menu->subscribe.'</a>';
+				$html .= "</span> | ";
+			}
+			
 			if ($article != null && $wiki->isMemberOwner($_SESSION['email_address']))
 			{				
 				$html .= "<span>";
