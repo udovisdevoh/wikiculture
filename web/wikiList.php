@@ -22,5 +22,8 @@
 		<p>
 			<a href=".\editWiki.php">Start a new wiki</a>
 		</p>
+		<?php
+			echo GoogleMapViewer::getHtmlCode();
+		?>
 	</body>
 </html>
