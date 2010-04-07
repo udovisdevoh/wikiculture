@@ -22,6 +22,10 @@ class LoginAction extends AbstractAction
 				$this->messageList[] = 'Invalid email or password';
 			}
 		}
+		else
+		{
+			$_SESSION['email_address'] = $this->member->getEmailAddress();
+		}
 	}
 	
 	//Le membre qui se connecte ou se connectera

@@ -14,9 +14,13 @@ class TopMenuViewer
 			$html .= '<span>';
 				$html .= '<a href="login.php">'.$language->menu->login.'</a>';
 			$html .= "</span> | ";
-			$html .= "<span>";
-				$html .= '<a href="logout.php">'.$language->menu->logout.'</a>';
-			$html .= "</span> | ";
+			
+			if ($_SESSION['email_address'] != null)
+			{
+				$html .= "<span>";
+					$html .= '<a href="logout.php">'.$language->menu->logout.'</a>';
+				$html .= "</span> | ";
+			}
 			if ($article != null)
 			{				
 				$html .= "<span>";
