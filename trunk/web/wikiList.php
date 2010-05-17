@@ -20,7 +20,10 @@
 			echo WikiListViewer::getHtmlCode($wikiList);
 		?>
 		<p>
-			<a href=".\editWiki.php">Start a new wiki</a>
+			<a href="./subscribe.php">Subscribe</a>
+		</p>
+		<p>
+			<a href="./editWiki.php">Start a new wiki</a>
 		</p>
 		<?php
 			echo GoogleMapViewer::getHtmlCode();
